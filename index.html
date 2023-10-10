@@ -4,7 +4,7 @@
 <head>
   <title>小鱼LAX</title>
   <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5">
-
+  <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,800" rel="stylesheet">
   <script src="./lib/lax.min.js"></script>
 
@@ -87,7 +87,7 @@
             ["Math.random()*screenHeight", "Math.random()*screenHeight*3"]
           ],
           opacity: [
-            ["screenHeight/4", "screenHeight/2"],
+            ["screenHeight/4", "screenHeight"],
             [0, 1]
           ],
           scale: [[0], ["(Math.random()*0.8)+0.2"]],
@@ -199,6 +199,7 @@
       font-size: 30px; */
       text-decoration: none;
       position: absolute;
+      /* padding-bottom: -100px; */
       /* top: 425vh; */
       /* border-radius: 20px; */
       /* left: 50vw; */
@@ -417,11 +418,11 @@
 
   <h1 class="wheee">node</h1>
 
-  <div class="bottombg"></div>
+  <!-- <div class="bottombg"></div> -->
 
 
   <div class="bottombutton">
-    <iframe name="content_frame" marginwidth=0 marginheight=0 width=100% height=100% src="end.htm" frameborder=0></iframe>
+    <iframe name="content_frame" marginwidth=0 marginheight=0 width=100% height=100% src="endbox.htm" frameborder=0></iframe>
   </div>
 
 
