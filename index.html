@@ -4,11 +4,16 @@
 <head>
   <title>小鱼LAX</title>
   <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5">
-
+  <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600,800" rel="stylesheet">
   <script src="./lib/lax.min.js"></script>
 
   <script type="text/javascript">
+    function adjustIframe() {
+      var ifm = document.getElementById("bi_iframe");
+      ifm.height = document.documentElement.clientHeight;
+      ifm.width = document.documentElement.clientWidth;
+    }
     window.scrollTo(0, 0)
 
     window.onload = function () {
@@ -87,7 +92,7 @@
             ["Math.random()*screenHeight", "Math.random()*screenHeight*3"]
           ],
           opacity: [
-            ["screenHeight/4", "screenHeight/2"],
+            ["screenHeight/4", "screenHeight"],
             [0, 1]
           ],
           scale: [[0], ["(Math.random()*0.8)+0.2"]],
@@ -188,24 +193,13 @@
     }
 
     .bottombutton {
-      /* background-image: url(./assets/button-bg.jpg); */
       width: 100vw;
       height: 100vh;
-      /* background-size: 160px; */
-      /* color: white;
-      font-weight: 800;
-      text-align: center;
-      line-height: 70px;
-      font-size: 30px; */
-      text-decoration: none;
+
       position: absolute;
-      /* top: 425vh; */
-      /* border-radius: 20px; */
-      /* left: 50vw; */
-      /* margin-left: -125px; */
-      z-index: 999;
-      /* pointer-events: all;
-      cursor: pointer; */
+
+      z-index: 998;
+
     }
 
     .bottombg {
@@ -417,11 +411,12 @@
 
   <h1 class="wheee">node</h1>
 
-  <div class="bottombg"></div>
+  <!-- <div class="bottombg"></div> -->
 
 
   <div class="bottombutton">
-    <iframe name="content_frame" marginwidth=0 marginheight=0 width=100% height=100% src="end.htm" frameborder=0></iframe>
+    <iframe name="content_frame" id="bi_iframe" marginwidth=0 marginheight=0  src="endbox.htm" frameborder=0
+      height="100%" width="100%" ></iframe>
   </div>
 
 
